@@ -1,0 +1,9 @@
+<p>pokesearch works!</p>
+
+<input #search placeholder="search your pokemon..." (input)="searchPokemon(search.value)"/>
+
+<ul class="search-result">
+  <li *ngFor="let pokemon of pokemons$ | async" class="search-result__item">
+    {{pokemon.id}} - {{pokemon.name.english}}
+  </li>
+</ul>
